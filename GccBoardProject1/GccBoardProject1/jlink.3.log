@@ -1,0 +1,7 @@
+T0BC8 1324:654 SEGGER J-Link V6.48a Log File (0001ms, 7326ms total)
+T0BC8 1324:654 DLL Compiled: Jul 30 2019 15:16:09 (0001ms, 7326ms total)
+T0BC8 1324:654 Logging started @ 2022-04-04 16:26 (0001ms, 7326ms total)
+T0BC8 1324:660 JLINK_ExecCommand("Device = ATSAML21J16B", ...). Device "ATSAML21J16" selected.  returns 0x00 (0002ms, 7328ms total)
+T0BC8 1324:820 JLINK_Close() (0004ms, 7332ms total)
+T0BC8 1324:820  (0004ms, 7332ms total)
+T0BC8 1324:820 Closed (0004ms, 7332ms total)
