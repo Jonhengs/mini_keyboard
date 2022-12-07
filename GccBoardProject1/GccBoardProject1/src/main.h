@@ -14,4 +14,9 @@ bool main_kbd_enable(void);
  */
 void main_kbd_disable(void);
 
+/*
+ * Callback for keyboard led state change
+ */
+void main_kbd_led_change(uint8_t report);
+
 #endif // _MAIN_H_

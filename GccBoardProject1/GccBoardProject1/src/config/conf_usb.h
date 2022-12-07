@@ -109,8 +109,8 @@
 //! Interface callback definition
 #define  UDI_HID_KBD_ENABLE_EXT()       main_kbd_enable()
 #define  UDI_HID_KBD_DISABLE_EXT()      main_kbd_disable()
-//#define  UDI_HID_KBD_CHANGE_LED(value)  ui_kbd_led(value)
-#define  UDI_HID_KBD_CHANGE_LED(value)
+#define  UDI_HID_KBD_CHANGE_LED(value)  main_kbd_led_change(value)
+// #define  UDI_HID_KBD_CHANGE_LED(value)
 //@}
 //@}
 

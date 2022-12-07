@@ -35,6 +35,8 @@
 
 #define EVER (;;)
 
+#define PIN_LED_CAPS PIN_PB09
+
 int main (void)
 {
 	irq_initialize_vectors();
@@ -52,6 +54,13 @@ int main (void)
 	
 	udc_start();
 	
+	// Setup Caps Lock LED
+	struct port_config config_port_pin;
+	port_get_config_defaults(&config_port_pin);
+	config_port_pin.direction = PORT_PIN_DIR_OUTPUT;
+	port_pin_set_config(PIN_LED_CAPS, &config_port_pin);
+	port_pin_set_output_level(PIN_LED_CAPS, true);
+	
 	for EVER {
 		 keyboard_update();
 	}
@@ -66,4 +75,15 @@ bool main_kbd_enable(void)
 void main_kbd_disable(void)
 {
 	keyboard_set_kbd_disabled();
+}
+
+void main_kbd_led_change(uint8_t report)
+{
+	if (report & HID_LED_CAPS_LOCK) {
+		port_pin_set_output_level(PIN_LED_CAPS, false);
+	}
+	else
+	{
+		port_pin_set_output_level(PIN_LED_CAPS, true);
+	}
 }

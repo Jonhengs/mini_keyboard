@@ -9,12 +9,14 @@
 #ifndef MATRIX_H_
 #define MATRIX_H_
 
-#define MATRIX_X	11
-#define MATRIX_Y	6
+#define MATRIX_X	12
+#define MATRIX_Y	5
 
 typedef struct matrix_key {
 	uint x_pos;
 	uint y_pos;
+	int normal;
+	int mod_fn;
 } matrix_key;
 
 bool keysEqual(matrix_key a, matrix_key b);
